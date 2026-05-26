@@ -75,3 +75,30 @@ SELECT
 FROM patients
 GROUP BY "Medical Condition"
 ORDER BY avg_length_of_stay_days DESC;
+SELECT *
+FROM patients
+LIMIT 5;
+SELECT
+    ROUND(AVG("Billing Amount"), 2) AS avg_billing,
+    ROUND(MIN("Billing Amount"), 2) AS min_billing,
+    ROUND(MAX("Billing Amount"), 2) AS max_billing,
+    ROUND(SUM("Billing Amount"), 2) AS total_billing
+FROM patients;
+/*
+Results:
+  Average billing: 25,539.32
+  Minimum billing: -2,008.49
+  Maximum billing: 52,764.28
+  Total billing:   1,417,432,043.40
+
+Observation: The minimum is negative, which is impossible for a real bill.
+This signals data-quality issues — investigated in the next query.
+*/
+-- ==============================================
+-- 4. DATA QUALITY CHECK
+-- ==============================================
+
+-- How many records have a negative billing amount? (These are invalid.)
+SELECT COUNT(*) AS negative_billing_count
+FROM patients
+WHERE "Billing Amount" < 0;

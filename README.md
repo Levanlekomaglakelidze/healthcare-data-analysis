@@ -27,12 +27,12 @@ The full analysis lives in [`01_exploratory_analysis.sql`](01_exploratory_analys
 
 ## Key Findings
 
-> _Replace these with your actual results — even rough numbers make this section much stronger._
 
-- The most common condition among patients was **[condition]**, accounting for **[N]** records.
-- Average billing amount was **[$X]**, ranging from **[$min]** to **[$max]**.
-- Data quality check flagged **[N]** records with negative billing amounts, indicating entry or processing errors that would need cleaning before downstream analysis.
-- Average length of stay was **[N] days**, varying by condition — **[condition]** had the longest average stay.
+
+- The most common condition among patients was **Arthritis**, accounting for **9,308** records.
+- Average billing amount was **$25,539.32**, ranging from **$-2,008.49** to **$52,764.28**.
+- Data quality check flagged **108** records with negative billing amounts, indicating entry or processing errors that would need cleaning before downstream analysis.
+- Average length of stay was 15.5 days, varying by condition — Asthma had the longest average stay.
 
 ## Skills Demonstrated
 
