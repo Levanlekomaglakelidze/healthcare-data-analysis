@@ -75,6 +75,20 @@ SELECT
 FROM patients
 GROUP BY "Medical Condition"
 ORDER BY avg_length_of_stay_days DESC;
+/*
+Results:
+  Asthma        15.70    9185
+  Arthritis     15.52    9308
+  Cancer        15.50    9227
+  Obesity       15.46    9231
+  Hypertension  15.46    9245
+  Diabetes      15.42    9304
+
+Observation: Average length of stay is nearly identical across all six
+conditions (range: 15.42–15.70 days, a spread of <0.3 days). In real data,
+stays would vary widely by condition — this uniformity confirms the dataset
+is synthetic and balanced rather than reflecting clinical reality.
+*/
 SELECT *
 FROM patients
 LIMIT 5;
