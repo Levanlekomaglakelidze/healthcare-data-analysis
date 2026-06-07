@@ -17,7 +17,7 @@ The full analysis lives in [`01_exploratory_analysis.sql`](01_exploratory_analys
 
 ## Analysis Performed
 
-- **Dataset overview & previewing** — row counts and structure to understand the shape of the data
+- **Dataset overview & previewing** - row counts and structure to understand the shape of the data
 - **Unique value exploration** — distinct conditions, categories, and field values
 - **Condition-level patient counts** — number of patients grouped by medical condition
 - **Financial analysis** — average, minimum, maximum, and total billing amounts
@@ -27,12 +27,10 @@ The full analysis lives in [`01_exploratory_analysis.sql`](01_exploratory_analys
 
 ## Key Findings
 
-
-
 - The most common condition among patients was **Arthritis**, accounting for **9,308** records.
 - Average billing amount was **$25,539.32**, ranging from **$-2,008.49** to **$52,764.28**.
 - Data quality check flagged **108** records with negative billing amounts, indicating entry or processing errors that would need cleaning before downstream analysis.
-- Average length of stay was 15.5 days, varying by condition — Asthma had the longest average stay.
+- Average length of stay was ~15.5 days and **nearly identical across all six conditions** (spread under 0.3 days) — a clear signal the data is synthetic, since real-world stays vary sharply by condition.
 
 ## Skills Demonstrated
 
